@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\gas_station.props" />
+</Project>

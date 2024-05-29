@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Fuel";
+}
+
+<div class="container-fluid position-relative p-0">
+    <video autoplay muted loop class="background-video w-100">
+        <source src="~/img/fuel.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-start">
+        <div class="text-white ms-5">
+            <h1 class="display-4 fw-bold">ТІЛЬКИ ЯКІСНЕ</h1>
+            <h1 class="display-4 fw-bold">ПАЛЬНЕ</h1>
+            <p class="lead">На наших АЗК ми заправляємо виключно імпортним пальним з Польщі та Литви стандарту ЄВРО-5. А ще хот-догами, кавою, салатами чи пастою за стандартом "ЯК СМАЧНО, ДАЙТЕ ЩЕ 5". Але тут – детальніше про пальне.</p>
+            <a href="@Url.Action("Map", "Home")" class="btn btn-light btn-lg">Наші АЗК</a>
+        </div>
+    </div>
+    <div class="position-absolute bottom-0 w-100 d-flex justify-content-center">
+        <div class="d-flex justify-content-center align-items-end mb-5">
+            <div class="fuel-type bg-primary text-white d-flex justify-content-center align-items-center mx-2">ДП</div>
+            <div class="fuel-type bg-warning text-dark d-flex justify-content-center align-items-center mx-2">92</div>
+            <div class="fuel-type bg-danger text-white d-flex justify-content-center align-items-center mx-2">95</div>
+            <div class="fuel-type bg-info text-white d-flex justify-content-center align-items-center mx-2">95-А</div>
+            <div class="fuel-type bg-success text-white d-flex justify-content-center align-items-center mx-2">ГАЗ</div>
+            <div class="fuel-type bg-secondary text-white d-flex justify-content-center align-items-center mx-2">AdBlue</div>
+        </div>
+    </div>
+</div>

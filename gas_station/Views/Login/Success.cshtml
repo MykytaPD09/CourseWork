@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Покупка палива</title>
+    <style>
+        .fuel-container {
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            margin: 20px;
+            display: inline-block;
+        }
+
+        .fuel-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .fuel-price {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .quantity-input {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+
+        .buy-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .buy-button:hover {
+                background-color: #45a049;
+            }
+
+        #result {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="fuel-container">
+        <div class="fuel-title">Паливо 92</div>
+        <div class="fuel-price">Ціна: $52.40 за літр</div>
+        <input type="number" class="quantity-input" id="quantity92" placeholder="Кількість (літри)">
+        <button class="buy-button" onclick="buyFuel('Паливо 92')">Придбати</button>
+    </div>
+
+    <div class="fuel-container">
+        <div class="fuel-title">Паливо 95</div>
+        <div class="fuel-price">Ціна: $53.40 за літр</div>
+        <input type="number" class="quantity-input" id="quantity95" placeholder="Кількість (літри)">
+        <button class="buy-button" onclick="buyFuel('Паливо 95')">Придбати</button>
+    </div>
+
+    <div class="fuel-container">
+        <div class="fuel-title">ДП (Дизельне паливо)</div>
+        <div class="fuel-price">Ціна: $53.45 за літр</div>
+        <input type="number" class="quantity-input" id="quantityDiesel" placeholder="Кількість (літри)">
+        <button class="buy-button" onclick="buyFuel('ДП')">Придбати</button>
+    </div>
+
+    <div class="fuel-container">
+        <div class="fuel-title">Газ</div>
+        <div class="fuel-price">Ціна: $27.80 за літр</div>
+        <input type="number" class="quantity-input" id="quantityGas" placeholder="Кількість (літри)">
+        <button class="buy-button" onclick="buyFuel('Газ')">Придбати</button>
+    </div>
+
+    <div class="fuel-container">
+        <div class="fuel-title">Паливо 95-Евро</div>
+        <div class="fuel-price">Ціна: $56.60 за літр</div>
+        <input type="number" class="quantity-input" id="quantity95Euro" placeholder="Кількість (літри)">
+        <button class="buy-button" onclick="buyFuel('Паливо 95-Евро')">Придбати</button>
+    </div>
+
+    <div id="result"></div>
+
+    <script>
+        function buyFuel(fuelType) {
+            var quantity;
+            var price;
+
+            switch (fuelType) {
+                case 'Паливо 92':
+                    quantity = parseFloat(document.getElementById("quantity92").value);
+                    price = 52.40;
+                    break;
+                case 'Паливо 95':
+                    quantity = parseFloat(document.getElementById("quantity95").value);
+                    price = 53.40;
+                    break;
+                case 'ДП':
+                    quantity = parseFloat(document.getElementById("quantityDiesel").value);
+                    price = 53.45;
+                    break;
+                case 'Газ':
+                    quantity = parseFloat(document.getElementById("quantityGas").value);
+                    price = 27.80;
+                    break;
+                case 'Паливо 95-Евро':
+                    quantity = parseFloat(document.getElementById("quantity95Euro").value);
+                    price = 56.60;
+                    break;
+                default:
+                    break;
+            }
+
+            if (!isNaN(quantity)) {
+                var totalPrice = quantity * price;
+                var code = generateCode();
+                document.getElementById("result").innerText = "Ви придбали " + quantity + " літрів " + fuelType + " за $" + totalPrice.toFixed(2) + ".\nВаш унікальний код: " + code + "\nЗбережіть цей код та покажіть його на касі.";
+            } else {
+                document.getElementById("result").innerText = "Будь ласка, введіть коректну кількість палива.";
+            }
+        }
+
+        function generateCode() {
+            var code = "";
+            var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            for (var i = 0; i < 10; i++) {
+                code += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            return code;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Fail";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Помилка</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .error-message {
+            font-size: 24px;
+            color: white;
+            margin-top: 50px;
+        }
+
+        .register-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .register-button:hover {
+                background-color: black;
+            }
+    </style>
+</head>
+<body>
+    <div class="error-message">Введені дані не коректні або такого користувача не існує</div>
+    <a href="@Url.Action("Reg", "Home")"><button class="register-button">Зареєструватися</button></a>
+</body>
+</html>

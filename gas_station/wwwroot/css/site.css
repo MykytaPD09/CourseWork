@@ -1,0 +1,288 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background: #F1AC29;
+}
+
+.full-width-container {
+    position: relative;
+    width: 100%;
+    margin: 0;
+}
+
+.background-image {
+    width: 100vw; 
+    height: auto;
+}
+
+.background-video {
+    height: 100vh;
+    object-fit: cover;
+}
+
+.text-white {
+    max-width: 500px;
+}
+
+.fuel-type {
+    width: 80px;
+    height: 80px;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 80px;
+}
+
+.footer {
+    background-color: #F1AC29;
+    color: #333;
+    margin-top: auto;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+    .footer a {
+        color: #333;
+        text-decoration: none;
+    }
+
+        .footer a:hover {
+            color: #000;
+        }
+
+    .footer .fab {
+        color: #333;
+    }
+
+        .footer .fab:hover {
+            color: #000;
+        }
+
+.display-3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.display-5 {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.lead {
+    font-size: 1.25rem;
+}
+
+.btn-primary1 {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.my-account-btn {
+    background-color: black;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+}
+
+    .my-account-btn:hover {
+        background-color: #333;
+    }
+
+.full-width-container {
+    position: relative;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.background-image {
+    width: 100%;
+    height: auto;
+}
+
+.history-section {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    text-align: left;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+    .history-section h2 {
+        margin-bottom: 15px;
+    }
+
+    .history-section p {
+        margin-bottom: 10px;
+        line-height: 1.6;
+    }
+
+.full-screen-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.header {
+    padding-top: 50px;
+    margin-bottom: 20px;
+}
+
+    .header h1 {
+        font-size: 3em;
+        margin: 0;
+    }
+
+    .header h2 {
+        font-size: 2em;
+        margin: 10px 0;
+    }
+
+.small-text {
+    font-size: 1em;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.spacer {
+    flex: 1;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 50%;
+    padding: 20px;
+}
+
+    .column img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        margin: 10px;
+    }
+
+    .column h2 {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+
+    .column p {
+        font-size: 1em;
+    }
+
+.row-images {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+    .row-images img {
+        width: 45%;
+    }
+
+.shape {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #a97b30;
+    border-top-left-radius: 50%;
+    z-index: -1;
+}
+
+.promo-section {
+    position: relative;
+    padding: 20px;
+}
+
+.promo-title {
+    text-align: left;
+    margin-left: 20px;
+}
+
+    .promo-title h1 {
+        font-size: 4em;
+        margin: 0;
+    }
+
+    .promo-title h2 {
+        font-size: 2em;
+        margin: 10px 0;
+    }
+
+.promo-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.promo-image {
+    flex: 1;
+    text-align: center;
+}
+
+    .promo-image img {
+        width: 80%; /* Adjust the image size as needed */
+        border-radius: 10px;
+    }
+
+.promo-text {
+    flex: 2;
+    margin-left: 20px;
+}
+
+    .promo-text p {
+        margin: 10px 0;
+    }
+
+    .promo-text ul {
+        list-style-type: disc;
+        margin-left: 20px;
+    }
+
+        .promo-text ul li {
+            margin: 5px 0;
+        }

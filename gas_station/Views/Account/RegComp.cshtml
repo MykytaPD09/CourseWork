@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "RegComp";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .success-message {
+            font-size: 24px;
+            color: white;
+            margin-top: 50px;
+        }
+
+        .login-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            .login-button:hover {
+                background-color: black;
+            }
+    </style>
+</head>
+<body>
+    <div class="success-message">Ви успішно зареєструвались. Вітаємо вас на нашому сайті</div>
+    <a href="@Url.Action("Login", "Home")"><button class="login-button">Вхід</button></a>
+</body>
+</html>
